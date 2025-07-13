@@ -1,0 +1,539 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Полоса переключения разрешений */
+.resolution-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.resolution-bar .btn {
+  padding: 5px 10px;
+  border: none;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resolution-bar .btn:hover,
+.resolution-bar .btn.active {
+  background: #28a745;
+  color: white;
+}
+
+/* Контейнер для изменения размеров */
+.content-container {
+  margin-top: 60px;
+  /* Отступ для полосы */
+  width: 100%;
+  /* По умолчанию Desktop */
+  transition: max-width 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tablet {
+  max-width: 768px;
+}
+
+.mobile {
+  max-width: 480px;
+}
+
+/* Навигационная панель */
+.navbar {
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  /* Выравнивание элементов вправо */
+  gap: 20px;
+  /* Расстояние между элементами */
+}
+
+.navbar-nav .nav-item {
+  list-style: none;
+}
+
+/* Размер иконки корзины */
+.navbar-nav .fa-shopping-cart {
+  font-size: 24px;
+}
+
+/* Убираем стандартный стиль ссылок */
+.nav-link {
+  color: #808080;
+  /* Начальный цвет серый */
+  font-size: 16px;
+  transition: color 0.3s ease;
+  /* Плавный переход */
+}
+
+/* Эффект при наведении */
+.nav-link:hover {
+  color: #000000;
+  /* Черный цвет при наведении */
+  text-decoration: none;
+  /* Убираем подчеркивание при наведении */
+}
+
+
+/* Секция с изображением */
+.image-header {
+  position: relative;
+  height: 90vh;
+  /* Высота экрана */
+  width: 100%;
+  background-image: url("image/-18.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Текст поверх изображения */
+.image-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Полупрозрачный тёмный фон */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.image-header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.image-header p {
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+}
+
+.btn-custom {
+  background-color: #b5655c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #9a4946;
+}
+
+/* Секция с товарами */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-card {
+  margin: 20px 0;
+}
+
+.product-card img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 300px;
+  margin-bottom: 15px;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Cookie footer */
+.cookie-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+
+.new-collection {
+  background-color: #f9f9f9;
+}
+
+.new-collection h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.new-collection p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.new-collection .btn-custom {
+  background-color: #8b5b55;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.new-collection .btn-custom:hover {
+  background-color: #6e4540;
+}
+
+.new-collection img {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+Стили для новой секции .workshops {
+  background-color: #f9f9f9;
+}
+
+.workshops h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.workshops p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.workshops .btn-custom {
+  background-color: #b5655c;
+  /* Цвет кнопки */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.workshops .btn-custom:hover {
+  background-color: #9a4946;
+  /* Цвет кнопки при наведении */
+}
+
+.workshops img {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+Стили для секции Team .team {
+  background: linear-gradient(to bottom, #f3f3f3, #e7e7e7);
+  /* Фон в стиле секции "New Collection" */
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ddd;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-name {
+  font-size: 1.8rem;
+  /* Крупный текст для имени */
+  font-weight: bold;
+  color: #444;
+}
+
+.team-description {
+  font-size: 1rem;
+  /* Меньший текст для описания */
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .team-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .team-name {
+    font-size: 1.6rem;
+  }
+
+  .team-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-name {
+    font-size: 1.4rem;
+  }
+
+  .team-description {
+    font-size: 0.9rem;
+  }
+}
+
+Стили для секции Photo Collage .photo-collage {
+  background: #f4f4f4;
+  /* Фон в стиле секции "Workshops" */
+  padding: 80px 0;
+}
+
+.collage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.collage-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.collage-item-large {
+  flex: 1;
+}
+
+.collage-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.collage-bottom {
+  display: flex;
+  gap: 20px;
+}
+
+.collage-item-medium {
+  width: 100%;
+}
+
+.collage-item-small {
+  flex: 1;
+}
+
+@media (max-width: 992px) {
+  .collage {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .collage-bottom {
+    flex-direction: column;
+  }
+}
+
+Стили для секции .image-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Полупрозрачный тёмный фон */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* Выравнивание текста по левому краю */
+  color: white;
+  text-align: left;
+  /* Выравнивание текста по левому краю */
+  padding-left: 50px;
+  /* Отступ слева */
+}
+
+.image-header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.image-header p {
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Выравниваем по верхнему краю */
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 50px;
+}
+
+.footer-section.social {
+  flex-direction: row;
+  justify-content: center;
+  gap: 18px;
+  width: auto;
+  max-width: none;
+  margin: 0;
+}
+
+/* --- MOBILE FOOTER COLUMN LAYOUT (phone size only) --- */
+@media (max-width: 576px) {
+  .footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  .footer>* {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto 0 auto !important;
+  }
+
+  .footer-section.social {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto 0 auto !important;
+  }
+}
+
+
+
+.footer-section {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* Расстояние между строками */
+  min-height: 50px;
+  /* Делаем секции одной высоты */
+}
+
+.footer-section a,
+.footer-section p {
+  color: white;
+  text-decoration: none;
+  /* Убираем подчеркивание */
+}
+
+.footer-section a:hover {
+  text-decoration: none;
+  /* Подчеркивание при наведении */
+}
+
+.social-icon:hover {
+  color: #ADFF2F;
+  /* Светло-салатовый при наведении */
+}
+
+.social-icon {
+  font-size: 20px;
+  /* Размер иконки */
+  color: #7CFC00;
+  /* Салатовый цвет */
+  transition: color 0.3s;
+}

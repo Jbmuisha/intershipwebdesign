@@ -1,0 +1,18 @@
+/* Footer switches to column layout in mobile mode (Mobile button) */
+body.mobile-view .footer,
+.content-container.mobile .footer {
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 18px !important;
+  text-align: center;
+}
+body.mobile-view .footer > *,
+.content-container.mobile .footer > * {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 400px;
+  margin: 0 auto 0 auto !important;
+}

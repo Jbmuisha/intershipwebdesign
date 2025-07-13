@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+  /* Полоса переключения разрешений */
+  .resolution-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .resolution-bar .btn {
+    padding: 5px 10px;
+    border: none;
+    background: #e0e0e0;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .resolution-bar .btn:hover, .resolution-bar .btn.active {
+    background: #28a745;
+    color: white;
+  }
+
+  /* Контейнер для изменения размеров */
+  .content-container {
+    margin-top: 60px; /* Отступ для полосы */
+    width: 100%; /* По умолчанию Desktop */
+    transition: max-width 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+   .tablet {
+    max-width: 768px;
+  }
+
+   .mobile {
+    max-width: 480px;
+  }
+   /* Навигационная панель */
+   .navbar {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand img {
+    height: 50px;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элементов вправо */
+    gap: 20px; /* Расстояние между элементами */
+  }
+  
+  .navbar-nav .nav-item {
+    list-style: none;
+  }
+  
+  /* Размер иконки корзины */
+  .navbar-nav .fa-shopping-cart {
+    font-size: 24px;
+  }
+  /* Убираем стандартный стиль ссылок */
+.nav-link {
+    color: #808080; /* Начальный цвет серый */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Плавный переход */
+  }
+  
+  /* Эффект при наведении */
+  .nav-link:hover {
+    color: #000000; /* Черный цвет при наведении */
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+  }
+
+
+  
+  
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* или любая другая высота */
+    background-image: url('image/-32.jpg'); /* замените на путь к вашему изображению */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .banner .banner-content {
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный тёмный фон */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+  }
+
+  .banner-content h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выравниваем по верхнему краю */
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    
+  }
+  .footer.mobile{
+    margin-right:10px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Расстояние между строками */
+    min-height: 50px; /* Делаем секции одной высоты */
+  }
+  
+  .footer-section a, 
+  .footer-section p {
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание */
+  }
+  
+  .footer-section a:hover {
+    text-decoration: none; /* Подчеркивание при наведении */
+  }
+  .social-icon:hover {
+    color: #ADFF2F; /* Светло-салатовый при наведении */
+  }
+  .social-icon {
+    font-size: 20px; /* Размер иконки */
+    color: #7CFC00; /* Салатовый цвет */
+    transition: color 0.3s;
+  }
+
+
+
+
+
+
+  .contact-container {
+  
+    gap: 30px;
+    padding: 20px;
+   
+}
+.social-icons a{
+    border:none;
+    color:#021a08;
+    }
+.social-icons a:hover{
+color: #28a745;
+}
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    font-size: 23px;
+    border-radius: 10px;
+}
+.contact-info {
+    margin-left: 120px; /* Отступ справа */
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+   margin-left:50px;
+    border-radius: 10px;
+    font-size:19px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #800000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #600000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+
+
+
+
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto; /* Центрирование */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+/* Default map style */
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* When Mobile mode is activated */
+.content-container.mobile .map-container iframe {
+  height: 250px; 
+  margin-left: 40px;/* smaller height for mobile */
+}
+
+/* When Tablet mode is activated */
+.content-container.tablet .map-container iframe {
+  height: 350px;
+}
+
+/* Desktop mode (or no mode) */
+.content-container.desktop .map-container iframe,
+.content-container:not(.mobile):not(.tablet) .map-container iframe {
+  height: 450px;
+}
+
+.content-container.mobile {
+  max-width: 480px;
+}
+
+.content-container.tablet {
+  max-width: 768px;
+}
+
+.content-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Force stacked layout when simulating mobile */
+.content-container.mobile .contact-info,
+.content-container.mobile .contact-form {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+/* Force row layout when simulating tablet or desktop */
+.content-container.tablet .contact-info {
+  width: 33.3333%;
+  flex: 0 0 33.3333%;
+}
+.content-container.tablet .contact-form {
+  width: 66.6666%;
+  flex: 0 0 66.6666%;
+}
+.mobile footer {
+  margin-left: 70px; /* moves footer 15px to the right, so to move left, use negative */
+}

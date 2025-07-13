@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Полоса переключения разрешений */
+.resolution-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.resolution-bar .btn {
+  padding: 5px 10px;
+  border: none;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resolution-bar .btn:hover,
+.resolution-bar .btn.active {
+  background: #28a745;
+  color: white;
+}
+
+/* Контейнер для изменения размеров */
+.content-container {
+  margin-top: 60px;
+  /* Отступ для полосы */
+  width: 100%;
+  /* По умолчанию Desktop */
+  transition: max-width 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tablet {
+  max-width: 768px;
+}
+
+.mobile {
+  max-width: 480px;
+}
+
+/* Навигационная панель */
+.navbar {
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  /* Выравнивание элементов вправо */
+  gap: 20px;
+  /* Расстояние между элементами */
+}
+
+.navbar-nav .nav-item {
+  list-style: none;
+}
+
+/* Размер иконки корзины */
+.navbar-nav .fa-shopping-cart {
+  font-size: 24px;
+}
+
+/* Убираем стандартный стиль ссылок */
+.nav-link {
+  color: #808080;
+  /* Начальный цвет серый */
+  font-size: 16px;
+  transition: color 0.3s ease;
+  /* Плавный переход */
+}
+
+/* Эффект при наведении */
+.nav-link:hover {
+  color: #000000;
+  /* Черный цвет при наведении */
+  text-decoration: none;
+  /* Убираем подчеркивание при наведении */
+}
+
+
+
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  /* или любая другая высота */
+  background-image: url('image/-30.jpg');
+  /* замените на путь к вашему изображению */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner .banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Полупрозрачный тёмный фон */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 50px;
+  align-items: center;
+}
+
+.footer-section.social {
+  flex-direction: row;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 0;
+  display: flex;
+  width: 100%;
+}
+
+.footer-section a,
+.footer-section p {
+  color: white;
+  text-decoration: none;
+  /* Убираем подчеркивание */
+}
+
+.footer-section {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* Расстояние между строками */
+  min-height: 50px;
+  /* Делаем секции одной высоты */
+}
+
+.content-container.mobile .footer {
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 20px 0 !important;
+}
+
+.content-container.mobile .footer-section {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 40px;
+  align-items: center;
+}
+
+.content-container.mobile .footer-section.social {
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  width: 100% !important;
+}
+
+.footer-section a:hover {
+  text-decoration: none;
+  /* Подчеркивание при наведении */
+}
+
+.social-icon:hover {
+  color: #ADFF2F;
+  /* Светло-салатовый при наведении */
+}
+
+.social-icon {
+  font-size: 20px;
+  /* Размер иконки */
+  color: #7CFC00;
+  /* Салатовый цвет */
+  transition: color 0.3s;
+}
+
+
+
+
+.list-block {
+  margin: 50px 250px;
+  /* Отступ сверху и снизу 50px, слева и справа 250px */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Mobile: Make list-block full width and column layout */
+.content-container.mobile .list-block {
+  margin: 24px 0 !important;
+  padding: 16px 8px !important;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.content-container.mobile .list-block ol {
+  padding-left: 18px !important;
+  font-size: 1.05em;
+}
+
+.list-block ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+}
+
+.list-block li {
+  font-size: 20px;
+  /* Увеличенный текст */
+  line-height: 1.8;
+  /* Увеличенное расстояние между строками */
+  margin-bottom: 15px;
+  /* Отступ между пунктами списка */
+  word-wrap: break-word;
+  /* Перенос длинных слов */
+  overflow-wrap: break-word;
+}

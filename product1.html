@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page</title>
+    <link rel="stylesheet" href="product1.css">
+    <link rel="stylesheet" href="product1-responsive.css">
+    <link rel="stylesheet" href="mobile-product-container.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Полоса переключения разрешений -->
+    <div class="resolution-bar" id="bar-r">
+        <button class="btn active" id="desktop-btn">Desktop</button>
+        <button class="btn" id="tablet-btn">Tablet</button>
+        <button class="btn" id="mobile-btn">Mobile</button>
+    </div>
+
+    <!-- Header -->
+    <div class="content-container" id="content-container">
+        <!-- Навигационная панель -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="image/-1.jpg" alt="Ceramic Logo"> <!-- Лого -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="workshop.html">WORKSHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        </li>
+                        <!-- Иконка корзины -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="cart-icon">
+                                <i class="fa fa-shopping-cart" style="font-size: 24px;"></i> <!-- Иконка корзины -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <section class="banner">
+            <div class="banner-content">
+                <h1>SHOP</h1>
+            </div>
+        </section>
+
+        <!-- Основной контейнер -->
+        <div class="product-container">
+            <!-- Первый блок с изображением -->
+            <div class="product-image">
+                <img src="image/-36.jpg" alt="Product Image" class="img-fluid">
+            </div>
+
+            <!-- Второй блок с информацией о продукте -->
+            <div class="product-info">
+                <h1 id="product-name">Online class</h1>
+                <p class="price" id="product-price">$29.99</p>
+                <p class="description">This is a short description of the product. It highlights key features and
+                    benefits.</p>
+                <button class="btn btn-primary" id="add-to-cart-btn">Add</button>
+                <p class="availability">Available in the store</p>
+            </div>
+        </div>
+
+        <section class="description-section mt-5">
+            <h2>Description</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum nisi nec massa rhoncus
+                venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                Phasellus suscipit scelerisque lorem ut dictum. Maecenas luctus hendrerit tristique. Nam nec ex
+                sagittis, fermentum turpis et, suscipit orci.</p>
+
+            <p>Vestibulum commodo felis at nunc viverra aliquet. Nam dapibus mauris sed tempus condimentum. Suspendisse
+                hendrerit bibendum libero, et vestibulum dolor congue quis. Aenean in consequat nulla. Praesent at
+                ullamcorper ligula, sit amet egestas nunc. Sed consectetur lorem vel efficitur interdum. Phasellus nulla
+                nibh, rhoncus ac ipsum vitae, fringilla ultricies lectus. Cras rutrum nisl eget libero laoreet varius.
+            </p>
+        </section>
+
+
+
+
+        <!-- Заголовок для блока с товарами -->
+        <section class="product-preview-section mt-5">
+            <h2>Popular products</h2>
+            <div class="row">
+                <!-- Первый товар -->
+                <div class="col-md-3 mb-4">
+                    <a href="product1.html" class="card text-decoration-none">
+                        <img src="image/-20.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="card-text">$29.99</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Второй товар -->
+                <div class="col-md-3 mb-4">
+                    <a href="product1.html" class="card text-decoration-none">
+                        <img src="image/-21.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 2</h5>
+                            <p class="card-text">$49.99</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Третий товар -->
+                <div class="col-md-3 mb-4">
+                    <a href="product1.html" class="card text-decoration-none">
+                        <img src="image/-22.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 3</h5>
+                            <p class="card-text">$19.99</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Четвертый товар -->
+                <div class="col-md-3 mb-4">
+                    <a href="product1.html" class="card text-decoration-none">
+                        <img src="image/-23.JPG" class="card-img-top" alt="Product 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 4</h5>
+                            <p class="card-text">$39.99</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Модальное окно для корзины (Просмотр корзины) -->
+        <div class="modal" tabindex="-1" id="cart-modal-view">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Your shopping cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="modal-cart-items-list">
+                            <!-- Здесь будут добавляться товары из корзины -->
+                        </ul>
+                        <div id="cart-total">
+                            <!-- Здесь будет выводиться общая сумма заказа -->
+                            <p>Total Amount: <span id="total-price">$0.00</span></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="checkout-btn">Proceed to payment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно для добавления в корзину -->
+        <div class="modal" tabindex="-1" id="cart-modal-add">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirmation of adding to the cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row align-items-center g-3">
+                            <div class="col-12 col-md-5 text-center">
+                                <div class="product-image-container">
+                                    <img src="image/ -33.jpg" id="modal-product-img" class="img-fluid"
+                                        alt="Product Image">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <div class="product-info-container">
+                                    <h1 id="modal-product-name">Online class</h1>
+                                    <p id="modal-product-price">$29.99</p>
+                                    <div class="mb-2">
+                                        <label for="quantity" class="form-label">Quantity:</label>
+                                        <input type="number" id="quantity" value="1" min="1" class="form-control w-50">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue the
+                            selection</button>
+                        <button type="button" class="btn btn-primary" id="confirm-order">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer d-flex flex-wrap justify-content-between text-white bg-dark p-4 mt-5">
+            <div class="footer-section">
+                <p class="footer-title">Address</p>
+                <p>Nicosia, Cyprus</p>
+            </div>
+            <div class="footer-section">
+                <p class="footer-title"><a href="#" class="text-white">Email</a></p>
+                <p><a href="#" class="text-white">info@example.com</a></p>
+            </div>
+            <div class="footer-section">
+                <p class="footer-title">
+                    <a href="reg.html" class="text-white">Rules</a>
+                </p>
+                <p><a href="pol.html" class="text-white">Regulations</a></p>
+            </div>
+            <div class="footer-section">
+                <p class="footer-title">
+                    <a href="delivery.html" class="text-white">Delivery</a>
+                </p>
+                <p><a href="delivery.html" class="text-white">Exchange</a></p>
+            </div>
+            <div class="footer-section social d-flex gap-3">
+                <a href="#" class="social-icon text-success"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon text-success"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon text-success"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </footer>
+        <script src="product1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+  /* Полоса переключения разрешений */
+  .resolution-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .resolution-bar .btn {
+    padding: 5px 10px;
+    border: none;
+    background: #e0e0e0;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .resolution-bar .btn:hover, .resolution-bar .btn.active {
+    background: #28a745;
+    color: white;
+  }
+
+  /* Контейнер для изменения размеров */
+  .content-container {
+    margin-top: 60px; /* Отступ для полосы */
+    width: 100%; /* По умолчанию Desktop */
+    transition: max-width 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+   .tablet {
+    max-width: 768px;
+  }
+
+   .mobile {
+    max-width: 480px;
+  }
+   /* Навигационная панель */
+   .navbar {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand img {
+    height: 50px;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элементов вправо */
+    gap: 20px; /* Расстояние между элементами */
+  }
+  
+  .navbar-nav .nav-item {
+    list-style: none;
+  }
+  
+  /* Размер иконки корзины */
+  .navbar-nav .fa-shopping-cart {
+    font-size: 24px;
+  }
+  /* Убираем стандартный стиль ссылок */
+.nav-link {
+    color: #808080; /* Начальный цвет серый */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Плавный переход */
+  }
+  
+  /* Эффект при наведении */
+  .nav-link:hover {
+    color: #000000; /* Черный цвет при наведении */
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+  }
+  
+  
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* или любая другая высота */
+    background-image: url('image/-31.jpg'); /* замените на путь к вашему изображению */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .banner .banner-content {
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный тёмный фон */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+  }
+
+  .banner-content h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+    background-color: #222;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Расстояние между строками */
+    min-height: 50px; /* Делаем секции одной высоты */
+  }
+  
+  .footer-section a, 
+  .footer-section p {
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание */
+  }
+  
+  .footer-section a:hover {
+    text-decoration: none; /* Подчеркивание при наведении */
+  }
+  .social-icon:hover {
+    color: #ADFF2F; /* Светло-салатовый при наведении */
+  }
+  .social-icon {
+    font-size: 20px; /* Размер иконки */
+    color: #7CFC00; /* Салатовый цвет */
+    transition: color 0.3s;
+  }
+
+
+
+
+  /* Общие стили */
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #746e6e;
+}
+
+/* Контейнер для блоков */
+.container {
+    
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    gap: 30px; /* Отступы между блоками */
+    padding: 20px;
+}
+
+/* Стили для каждого блока */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Внутренний блок для картинки и текста */
+.card-inner {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 20px; /* Отступы между изображением и текстом */
+}
+
+/* Ensure Bootstrap columns don't override custom flex layout on desktop */
+@media (min-width: 769px) {
+    .card-inner.row {
+        flex-wrap: nowrap !important;
+        display: flex !important;
+    }
+    .card-inner .card-left.col-md-6,
+    .card-inner .card-right.col-md-6 {
+        flex: 1 1 0%;
+        max-width: 50%;
+        width: 50%;
+    }
+}
+
+/* On mobile, let Bootstrap stack columns naturally */
+@media (max-width: 768px) {
+    .card-inner {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .card-inner .card-left.col-md-6,
+    .card-inner .card-left.col-md-6.order-md-1,
+    .card-inner .card-right.col-md-6,
+    .card-inner .card-right.col-md-6.order-md-2 {
+        max-width: 100%;
+        width: 100%;
+        order: unset !important;
+    }
+    /* Ensure image is always on top, text below on mobile */
+    .card-inner .card-left {
+        order: 1 !important;
+    }
+    .card-inner .card-right {
+        order: 2 !important;
+    }
+    .card-inner .card-left img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+    .card-inner .card-right {
+        text-align: center;
+    }
+}
+
+/* Стили для картинок */
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Стили для текста */
+.card h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-with-bg {
+    background-color: #863913;
+    color: white;
+    border: none;
+}
+
+.btn-with-bg:hover {
+    background-color: #692706;
+}
+
+.btn-no-bg {
+    background-color: transparent;
+    border: underline;
+    color: #863913;
+}
+
+.btn-no-bg:hover {
+   
+    border-color: #863913;
+
+/* Force mobile card layout when .mobile class is present, regardless of screen size */
+
+/* SHOP PAGE: Force product cards to column and big image on mobile mode */
+.content-container.mobile .products {
+    flex-direction: column !important;
+    display: flex !important;
+    align-items: center;
+}
+.content-container.mobile .products .product {
+    width: 100% !important;
+    max-width: 450px;
+    margin: 0 auto 24px auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-container.mobile .products .product img {
+    width: 100% !important;
+    max-width: 400px;
+    height: auto !important;
+    display: block;
+    margin: 0 auto 16px auto;
+    border-radius: 12px;
+}
+
+.content-container.mobile .card-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.content-container.mobile .card-left.col-md-6,
+.content-container.mobile .card-left.col-md-6.order-md-1,
+.content-container.mobile .card-right.col-md-6,
+.content-container.mobile .card-right.col-md-6.order-md-2 {
+    max-width: 100%;
+    width: 100%;
+    order: unset !important;
+}
+.content-container.mobile .card-left {
+    order: 1 !important;
+}
+.content-container.mobile .card-right {
+    order: 2 !important;
+    text-align: center;
+}
+.content-container.mobile .card-left img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+}
+
+/* Card layout for desktop (row), mobile (column), and forced mobile mode */
+
+.card-inner {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* On desktop, columns are side by side */
+@media (min-width: 769px) {
+    .card-inner.row {
+        flex-wrap: nowrap !important;
+        display: flex !important;
+    }
+    .card-inner .card-left.col-md-6,
+    .card-inner .card-right.col-md-6 {
+        flex: 1 1 0%;
+        max-width: 50%;
+        width: 50%;
+    }
+    .card-left img {
+        width: 600px;
+        height: 600px;
+        object-fit: cover;
+        max-width: 100%;
+    }
+}
+
+/* On mobile and forced mobile, stack vertically */
+@media (max-width: 768px) {
+    .card-inner {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .card-inner .card-left.col-md-6,
+    .card-inner .card-left.col-md-6.order-md-1,
+    .card-inner .card-right.col-md-6,
+    .card-inner .card-right.col-md-6.order-md-2 {
+        max-width: 100%;
+        width: 100%;
+        order: unset !important;
+    }
+    .card-inner .card-left {
+        order: 1 !important;
+    }
+    .card-inner .card-right {
+        order: 2 !important;
+        text-align: center;
+    }
+    .card-inner .card-left img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Forced mobile mode (when .mobile class is present) - always column, always full width */
+.content-container.mobile .card-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.content-container.mobile .card-left.col-md-6,
+.content-container.mobile .card-left.col-md-6.order-md-1,
+.content-container.mobile .card-right.col-md-6,
+.content-container.mobile .card-right.col-md-6.order-md-2 {
+    max-width: 100%;
+    width: 100%;
+    order: unset !important;
+}
+.content-container.mobile .card-left {
+    order: 1 !important;
+}
+.content-container.mobile .card-right {
+    order: 2 !important;
+    text-align: center;
+}
+.content-container.mobile .card-left img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+.content-container.mobile button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+

@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Полоса переключения разрешений */
+.resolution-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.resolution-bar .btn {
+  padding: 5px 10px;
+  border: none;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resolution-bar .btn:hover,
+.resolution-bar .btn.active {
+  background: #28a745;
+  color: white;
+}
+
+/* Контейнер для изменения размеров */
+.content-container {
+  margin-top: 60px;
+  /* Отступ для полосы */
+  width: 100%;
+  /* По умолчанию Desktop */
+  transition: max-width 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tablet {
+  max-width: 768px;
+}
+
+.mobile {
+  max-width: 480px;
+}
+
+/* Навигационная панель */
+.navbar {
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  /* Выравнивание элементов вправо */
+  gap: 20px;
+  /* Расстояние между элементами */
+}
+
+.navbar-nav .nav-item {
+  list-style: none;
+}
+
+/* Размер иконки корзины */
+.navbar-nav .fa-shopping-cart {
+  font-size: 24px;
+}
+
+/* Убираем стандартный стиль ссылок */
+.nav-link {
+  color: #808080;
+  /* Начальный цвет серый */
+  font-size: 16px;
+  transition: color 0.3s ease;
+  /* Плавный переход */
+}
+
+/* Эффект при наведении */
+.nav-link:hover {
+  color: #000000;
+  /* Черный цвет при наведении */
+  text-decoration: none;
+  /* Убираем подчеркивание при наведении */
+}
+
+
+
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  /* или любая другая высота */
+  background-image: url('image/-30.jpg');
+  /* замените на путь к вашему изображению */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner .banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Полупрозрачный тёмный фон */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Выравниваем по верхнему краю */
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* Расстояние между строками */
+  min-height: 50px;
+  /* Делаем секции одной высоты */
+}
+
+.footer-section a,
+.footer-section p {
+  color: white;
+  text-decoration: none;
+  /* Убираем подчеркивание */
+}
+
+.footer-section a:hover {
+  text-decoration: none;
+  /* Подчеркивание при наведении */
+}
+
+.social-icon:hover {
+  color: #ADFF2F;
+  /* Светло-салатовый при наведении */
+}
+
+.social-icon {
+  font-size: 20px;
+  /* Размер иконки */
+  color: #7CFC00;
+  /* Салатовый цвет */
+  transition: color 0.3s;
+}
+
+
+.content-block {
+  margin-left: 250px;
+  /* Отступы со всех сторон */
+  margin-right: 250px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+  /* Внутренние отступы */
+  font-size: 20px;
+  /* Увеличенный размер шрифта */
+  line-height: 1.6;
+  /* Улучшенное межстрочное расстояние */
+  border-radius: 10px;
+  /* Скругленные углы (по желанию) */
+
+}
+
+.content-block h2 {
+  font-size: 40px;
+  /* Увеличенный размер заголовков */
+  font-weight: bold;
+  /* Жирный шрифт */
+  margin-bottom: 10px;
+  /* Отступ снизу */
+}
+
+body.mobile-view .footer>*,
+.content-container.mobile .footer>* {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 400px;
+  margin: 0 auto 0 auto !important;
+}
+
+/* Force footer and all children to column layout in mobile mode (Mobile button) */
+body.mobile-view .footer,
+.content-container.mobile .footer {
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 18px !important;
+  text-align: center;
+}

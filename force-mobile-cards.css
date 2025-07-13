@@ -1,0 +1,25 @@
+/* Force mobile card layout when .mobile class is present, regardless of screen size */
+.content-container.mobile .card-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.content-container.mobile .card-left.col-md-6,
+.content-container.mobile .card-left.col-md-6.order-md-1,
+.content-container.mobile .card-right.col-md-6,
+.content-container.mobile .card-right.col-md-6.order-md-2 {
+    max-width: 100%;
+    width: 100%;
+    order: unset !important;
+}
+.content-container.mobile .card-left {
+    order: 1 !important;
+}
+.content-container.mobile .card-right {
+    order: 2 !important;
+    text-align: center;
+}
+.content-container.mobile .card-left img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
